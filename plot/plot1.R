@@ -2,7 +2,7 @@
 ## Please make sure the household_power_consumption.txt
 ## is currently located in the working directory
 
-## Read in the data of July 1st - 2nd
+## Read in the data of Feb 1st - 2nd
 ## by pipe and egrep function (General Expression)
 ge <- 'egrep \'^Date|^[1-2]/2/2007\' household_power_consumption.txt'
 consumption <- read.table(pipe(ge), header=T, sep=";")
