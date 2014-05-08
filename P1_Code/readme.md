@@ -1,10 +1,10 @@
 For peer reviewers' convenience.
 ========================================================
 
+_This file is created with RMarkdown and by Yuantao Wang._
+
 ### A NOTE for peer reviewers:
 #### Please make sure the household_power_consumption.txt is currently located in the working directory
-
-_Created with RMarkdown and knitr library_
 
 ### __Fig1__
 
