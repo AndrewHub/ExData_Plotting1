@@ -1,4 +1,4 @@
-Class 4 project 1 solutions
+For peer reviewers' convenience.
 ========================================================
 
 ### A NOTE for peer reviewers:
