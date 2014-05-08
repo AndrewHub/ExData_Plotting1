@@ -1,7 +1,5 @@
-For peer reviewers' convenience.
+Class 4 project 1 solutions
 ========================================================
-
-_This file is created with RMarkdown and by Yuantao Wang._
 
 ### A NOTE for peer reviewers:
 #### Please make sure the household_power_consumption.txt is currently located in the working directory
