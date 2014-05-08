@@ -2,7 +2,7 @@ For the convenience of peer reviews
 ========================================================
 
 ### A NOTE for peer reviewers:
-#### Please make sure the household_power_consumption.txt is currently located in the working directory
+#### Please make sure the _household_power_consumption.txt_ is currently located in the working directory
 
 ### __Fig1__
 __Read in the data of July 1st - 2nd by pipe and egrep function (General Expression)__
