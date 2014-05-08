@@ -81,7 +81,7 @@ dev.off()
 
 ### __Fig3__
 
-__create a df contains time and metering data only__
+__Create a df contains time and metering data only__
 
 ```r
 df <- data.frame(Time_as_date, consumption[, c(7, 8, 9)])
@@ -89,6 +89,7 @@ df <- data.frame(Time_as_date, consumption[, c(7, 8, 9)])
 
 
 __Create a plot of Energy sub metering to date on screen device__
+__And create legend on the topright__
 
 ```r
 
@@ -96,21 +97,12 @@ plot(df$Time_as_date, df$Sub_metering_1, type = "l", col = "black", xlab = "",
     ylab = "Energy sub metering")
 lines(df$Time_as_date, df$Sub_metering_2, type = "l", col = "red")
 lines(df$Time_as_date, df$Sub_metering_3, type = "l", col = "blue")
-```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
-
-
-__Create legend on the topright__
-
-```r
 legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", 
     "Sub_metering_2", "Sub_metering_3"))
 ```
 
-```
-## Error: plot.new has not been called yet
-```
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
 
 
 __Copy the plot to a PNG file with a width of 480 pixels and a height of 480 pixels__
@@ -161,7 +153,7 @@ plot(df$Time_as_date, df$Global_reactive_power, type = "l", xlab = "datetime",
     ylab = "Global_reactive_power")
 ```
 
-![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16.png) 
+![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
 
 
 __Copy the plot to a PNG file with a width of 480 pixels and a height of 480 pixels__
