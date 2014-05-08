@@ -1,11 +1,11 @@
 For the convenience of peer reviews
 ========================================================
-
+_This document is created by $Yuantao Wang$ with the help of $RMarkdown$ and the $knitr$ library._
 ### A NOTE for peer reviewers:
-#### Please make sure the _household_power_consumption.txt_ is currently located in the working directory
+#### Please make sure the _household_power_consumption.txt_ is currently located in the working directory.
 
 ### __Fig1__
-__Read in the data of July 1st - 2nd by pipe and egrep function (General Expression)__
+__Read in the data of July 1st - 2nd by pipe and egrep function (General Expression).__
 
 ```r
 ge <- "egrep '^Date|^[1-2]/2/2007' household_power_consumption.txt"
@@ -13,7 +13,7 @@ consumption <- read.table(pipe(ge), header = T, sep = ";")
 ```
 
 
-__Create a histogram of global active power on screen device__
+__Create a histogram of global active power on screen device.__
 
 ```r
 hist(consumption$Global_active_power, xlab = "Global Active Power (kilowatts)", 
@@ -23,14 +23,14 @@ hist(consumption$Global_active_power, xlab = "Global Active Power (kilowatts)",
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
 
 
-__Copy the plot to a PNG file with a width of 480 pixels and a height of 480 pixels__
+__Copy the plot to a PNG file with a width of 480 pixels and a height of 480 pixels.__
 
 ```r
 dev.copy(png, file = "plot1.png", width = 480, height = 480)
 ```
 
 
-__Close the PNG device__
+__Close the PNG device.__
 
 ```r
 dev.off()
@@ -38,7 +38,7 @@ dev.off()
 
 
 ### __Fig2__
-__Paste date and time together and coerce them into POSIXlt__
+__Paste date and time together and coerce them into POSIXlt.__
 
 ```r
 date_list <- as.character(consumption$Date)
@@ -48,7 +48,7 @@ Time_as_date <- strptime(Time_list, "%d/%m/%Y %H:%M:%S")
 ```
 
 
-__Create a df contains the time and gap data only__
+__Create a df contains the time and gap data only.__
 
 ```r
 Global_active_power <- consumption$Global_active_power
@@ -56,7 +56,7 @@ df <- data.frame(Time_as_date, Global_active_power)
 ```
 
 
-__Create a plot of global active power on screen device__
+__Create a plot of global active power on screen device.__
 
 ```r
 plot(df$Time_as_date, df$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
@@ -65,14 +65,14 @@ plot(df$Time_as_date, df$Global_active_power, type = "l", xlab = "", ylab = "Glo
 ![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
 
 
-__Copy the plot to a PNG file with a width of 480 pixels and a height of 480 pixels__
+__Copy the plot to a PNG file with a width of 480 pixels and a height of 480 pixels.__
 
 ```r
 dev.copy(png, file = "plot2.png", width = 480, height = 480)
 ```
 
 
-__Close the PNG device__
+__Close the PNG device.__
 
 ```r
 dev.off()
@@ -81,15 +81,14 @@ dev.off()
 
 ### __Fig3__
 
-__Create a df contains time and metering data only__
+__Create a df contains time and metering data only.__
 
 ```r
 df <- data.frame(Time_as_date, consumption[, c(7, 8, 9)])
 ```
 
 
-__Create a plot of Energy sub metering to date on screen device__
-__And create legend on the topright__
+__Create a plot of Energy sub metering to date on screen device,__ __Create legend on the topright.__
 
 ```r
 
@@ -105,14 +104,14 @@ legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_met
 ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
 
 
-__Copy the plot to a PNG file with a width of 480 pixels and a height of 480 pixels__
+__Copy the plot to a PNG file with a width of 480 pixels and a height of 480 pixels.__
 
 ```r
 dev.copy(png, file = "plot3.png", width = 480, height = 480)
 ```
 
 
-__Close the PNG device__
+__Close the PNG device.__
 
 ```r
 dev.off()
@@ -121,14 +120,14 @@ dev.off()
 
 ### __Fig4__
 
-__Create a df contains time and required data for plotting__
+__Create a df contains time and required data for plotting.__
 
 ```r
 df <- data.frame(Time_as_date, consumption[, c(3, 4, 5, 7, 8, 9)])
 ```
 
 
-__Create 4 seperate plots on the same screen device__
+__Create 4 seperate plots on the same screen device.__
 
 ```r
 par(mfrow = c(2, 2), mar = c(4, 4, 0.5, 1), ps = 12, cex = 1, cex.axis = 0.85, 
@@ -156,14 +155,14 @@ plot(df$Time_as_date, df$Global_reactive_power, type = "l", xlab = "datetime",
 ![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
 
 
-__Copy the plot to a PNG file with a width of 480 pixels and a height of 480 pixels__
+__Copy the plot to a PNG file with a width of 480 pixels and a height of 480 pixels.__
 
 ```r
 dev.copy(png, file = "plot4.png", width = 480, height = 480)
 ```
 
 
-__Close the PNG device__
+__Close the PNG device.__
 
 ```r
 dev.off()
