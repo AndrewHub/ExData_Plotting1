@@ -1,6 +1,7 @@
 For the convenience of peer reviews
 ========================================================
-_This document is created by $Yuantao Wang$ with the help of $RMarkdown$ and the $knitr$ library._
+_This document is created by Yuantao Wang with the help of RMarkdown and the knitr library._  
+_You can also click [here](https://dl.dropboxusercontent.com/s/n4twmi17ah89jen/class4pj1.html) for better view of this document._
 ### A NOTE for peer reviewers:
 #### Please make sure the _household_power_consumption.txt_ is currently located in the working directory.
 
