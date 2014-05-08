@@ -6,7 +6,7 @@ _You can also click [here](https://dl.dropboxusercontent.com/s/n4twmi17ah89jen/c
 #### Please make sure the _household_power_consumption.txt_ is currently located in the working directory.
 
 ### __Fig1__
-__Read in the data of July 1st - 2nd by pipe and egrep function (General Expression).__
+__Read in the data of Feb 1st - 2nd by pipe and egrep function (General Expression).__
 
 ```r
 ge <- "egrep '^Date|^[1-2]/2/2007' household_power_consumption.txt"
